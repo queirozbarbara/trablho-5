@@ -3,59 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio Profissional | Seu Nome</title>
+<title>Portfólio do João</title> <!-- Nome personalizado -->
 
 <style>
-  :root {
-    /* CORES: Mude os códigos hexadecimais para trocar o tema */
-    --primary: #6366f1;    /* Cor dos botões e detalhes (Índigo) */
-    --secondary: #4338ca;  /* Cor ao passar o mouse */
-    --bg-dark: #0f172a;    /* Fundo principal */
-    --bg-card: #1e293b;    /* Fundo dos cartões */
-    --text-main: #f8fafc;  /* Cor do texto */
-  }
-
+  /* Estilo do corpo */
   body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-main);
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: #0f172a; /* Cor de fundo */
+    color: #f1f5f9; /* Cor do texto */
   }
 
+  /* Cabeçalho */
   header {
-    background: rgba(30, 41, 59, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 1rem 5%;
+    background: #2563eb; /* Cor do cabeçalho */
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #334155;
   }
 
   header h1 {
     margin: 0;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: var(--primary);
+    font-size: 24px;
   }
 
   nav a {
-    color: white;
-    margin-left: 20px;
+    color: #f1f5f9;
+    margin-left: 15px;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: color 0.3s;
   }
 
   nav a:hover {
-    color: var(--primary);
+    color: #60a5fa; /* Cor do hover */
+    text-decoration: underline;
   }
 
+  /* Seções */
   section {
-    padding: 80px 10%;
-    max-width: 1000px;
-    margin: 0
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #3b82f6;
+  }
+
+  /* Botão personalizado */
+  .btn {
+    padding: 12px 25px;
+    background: #10b981; /* Cor do botão */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+
+  .btn:hover {
+    background: #059669; /* Cor do botão ao passar o mouse */
+  }
+
+  /* Cartões de projetos */
+  .card {
+    background: #1e293b;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  /* Rodapé */
+  footer {
+    background: #020617;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+
+  /* Responsivo */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Portfólio do João</h1> <!-- Nome personalizado -->
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section id="sobre">
+  <h2>Sobre mim</h2>
+  <p>Olá! Meu nome é João. Sou estudante de programação e adoro criar sites modernos e funcionais. Sempre busco aprender algo novo todos os dias!</p>
+</section>
+
+<section id="projetos">
+  <h2>Meus Projetos</h2>
+
+  <div class="card">
+    <h3>Projeto 1: Site Pessoal</h3>
+    <p>Meu primeiro site publicado no GitHub.</p>
+    <a href="https://github.com/seuusuario/projeto1" target="_blank">
+      <img src="2cursejalogo.png" width="200" alt="Projeto 1">
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Projeto 2: Calculadora Web</h3>
+    <p>Uma calculadora feita com HTML, CSS e JavaScript.</p>
+    <img src="https://via.placeholder.com/200" alt="Projeto 2">
+  </div>
+
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <button class="btn" onclick="mensagem()">Falar comigo</button>
+</section>
+
+<footer>
+  © 2026 - Portfólio do João
+</footer>
+
+<script>
+function mensagem() {
+  alert("Obrigado por visitar meu site! Entre em contato pelo email: joao@email.com");
+}
+</script>
+
+</body>
+</html>
